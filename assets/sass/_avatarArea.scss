@@ -1,0 +1,35 @@
+.user-avatar {
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: flex-start;
+
+    & span {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    & img {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        @include prefix(border-radius, 20px, ms o webkit moz);
+    }
+
+    & .info {
+        padding: 10px;
+    }
+
+    & a {
+        text-decoration: none;
+        color: $navigation-font-color;
+        background-color: $navigation-background-link-avatar;
+        @include prefix(border-radius, 50%, ms o webkit moz);
+        @include prefix(transition, all 0.1s ease-in-out, ms o webkit moz);
+        padding: 5px;
+        margin: 20px 30px 0 0;
+        display: block;
+    }
+    & a:hover{
+        background-color: lighten($color: $navigation-background-link-avatar, $amount:15 );
+    }
+}

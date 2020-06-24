@@ -1,0 +1,43 @@
+.navigation {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 320px; 
+    height: 100vh;
+    background-color: $navigation-background;
+    color: $navigation-font-color;
+    right: 0;
+    position: fixed;
+    @include prefix(border-top-left-radius, 1em, ms o webkit moz);
+    @include prefix(border-bottom-left-radius, 1em, ms o webkit moz);   
+}
+.navigation ul li {
+    padding: 0 1em 0 2em;
+}
+
+.navigation ul li a {
+    padding: 13px 5px 13px 0;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: $navigation-font-color;
+    @include prefix(border-radius, 10px, ms o webkit moz);
+    @include prefix(transition, all 0.1s ease-in-out, ms o webkit moz);
+    outline: none;
+
+    &>span {
+        padding: 10px;
+    }
+
+    &:hover {
+        background: $navigation-background-hover;
+        @include prefix(box-shadow, 0 0 5px $navigation-hover-shadow-color, ms o webkit moz);
+    }
+}
+.navigation-header{
+    padding: 0 15px 0 0;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

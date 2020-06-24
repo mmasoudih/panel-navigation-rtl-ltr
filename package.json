@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "scss": "node-sass --watch assets/sass -o assets/css --output-style compressed"
+    "scss": "node-sass --watch assets/sass -o assets/css --output-style expanded"
   },
   "devDependencies": {
     "sass-loader": "^8.0.2"
