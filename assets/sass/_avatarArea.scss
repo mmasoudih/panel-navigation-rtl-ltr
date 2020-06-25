@@ -1,5 +1,5 @@
 .user-avatar {
-    padding: 0 20px 0 0;
+    padding: 0 8px 0 0;
     display: flex;
     justify-content: flex-start;
 
@@ -23,11 +23,12 @@
         text-decoration: none;
         color: $navigation-font-color;
         background-color: $navigation-background-link-avatar;
-        @include prefix(border-radius, 50%, ms o webkit moz);
+        border-radius: 50%;
         @include prefix(transition, all 0.1s ease-in-out, ms o webkit moz);
         padding: 5px;
         margin: 20px 30px 0 0;
         display: block;
+        outline: none;
     }
     & a:hover{
         background-color: lighten($color: $navigation-background-link-avatar, $amount:15 );

@@ -9,8 +9,10 @@
     color: $navigation-font-color;
     right: 0;
     position: fixed;
-    @include prefix(border-top-left-radius, 1em, ms o webkit moz);
-    @include prefix(border-bottom-left-radius, 1em, ms o webkit moz);   
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em; 
+    padding: 15px 0 0 0;  
+    @include prefix(transition, width 0.4s ease-in-out, ms o webkit moz);
 }
 .navigation ul li {
     padding: 0 1em 0 2em;
@@ -22,11 +24,11 @@
     width: 100%;
     text-decoration: none;
     color: $navigation-font-color;
-    @include prefix(border-radius, 10px, ms o webkit moz);
+    border-radius: 10px;
     @include prefix(transition, all 0.1s ease-in-out, ms o webkit moz);
     outline: none;
 
-    &>span {
+    &>span.icon {
         padding: 10px;
     }
 
@@ -36,8 +38,8 @@
     }
 }
 .navigation-header{
-    padding: 0 15px 0 0;   
+    padding: 0 35px;   
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }

@@ -1,0 +1,24 @@
+.navigation-header-search-form{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: column;
+    padding: 0 28px;
+    @include prefix(transition, width 0.4s ease-in-out, ms o webkit moz);
+    & input {
+        padding: 10px 40px 10px 0;
+        background-color: lighten($color: $navigation-background-link-avatar, $amount:0 );
+        color: $navigation-font-color; 
+        border-radius: 10px;
+        border: none;
+        font-family: "Vazir";
+        width:100%;
+    }
+}
+.isearch{
+    position: absolute;
+    right: 1.4em;
+    top:10px;
+    opacity: 0.7;
+}

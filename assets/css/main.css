@@ -75,16 +75,14 @@ body {
   color: #fff;
   right: 0;
   position: fixed;
-  -ms-border-top-left-radius: 1em;
-  -o-border-top-left-radius: 1em;
-  -webkit-border-top-left-radius: 1em;
-  -moz-border-top-left-radius: 1em;
   border-top-left-radius: 1em;
-  -ms-border-bottom-left-radius: 1em;
-  -o-border-bottom-left-radius: 1em;
-  -webkit-border-bottom-left-radius: 1em;
-  -moz-border-bottom-left-radius: 1em;
   border-bottom-left-radius: 1em;
+  padding: 15px 0 0 0;
+  -ms-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  -webkit-transition: width 0.4s ease-in-out;
+  -moz-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
 .navigation ul li {
@@ -97,10 +95,6 @@ body {
   width: 100%;
   text-decoration: none;
   color: #fff;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -110,7 +104,7 @@ body {
   outline: none;
 }
 
-.navigation ul li a > span {
+.navigation ul li a > span.icon {
   padding: 10px;
 }
 
@@ -124,14 +118,45 @@ body {
 }
 
 .navigation-header {
-  padding: 0 15px 0 0;
+  padding: 0 35px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.navigation-header-search-form {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: column;
+  padding: 0 28px;
+  -ms-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  -webkit-transition: width 0.4s ease-in-out;
+  -moz-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.navigation-header-search-form input {
+  padding: 10px 40px 10px 0;
+  background-color: #383741;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-family: "Vazir";
+  width: 100%;
+}
+
+.isearch {
+  position: absolute;
+  right: 1.4em;
+  top: 10px;
+  opacity: 0.7;
 }
 
 .user-avatar {
-  padding: 0 20px 0 0;
+  padding: 0 8px 0 0;
   display: flex;
   justify-content: flex-start;
 }
@@ -160,10 +185,6 @@ body {
   text-decoration: none;
   color: #fff;
   background-color: #383741;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -173,6 +194,7 @@ body {
   padding: 5px;
   margin: 20px 30px 0 0;
   display: block;
+  outline: none;
 }
 
 .user-avatar a:hover {
