@@ -13,6 +13,7 @@
     border-bottom-left-radius: 1em; 
     padding: 15px 0 0 0;  
     @include prefix(transition, width 0.4s ease-in-out, ms o webkit moz);
+    overflow: auto;
 }
 .navigation ul li {
     padding: 0 1em 0 2em;
