@@ -1,11 +1,8 @@
 {
   "scripts": {
-    "scss": "node-sass --watch assets/sass -o assets/css --output-style expanded"
-  },
-  "devDependencies": {
-    "sass-loader": "^8.0.2"
+    "scss": "sass --watch assets/sass:assets/css -s expanded"
   },
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "sass": "^1.32.12"
   }
 }

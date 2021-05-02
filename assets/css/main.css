@@ -18,22 +18,20 @@ body {
 
 /* fallback */
 @font-face {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/mti-filled.woff2") format("woff2");
 }
-
 /* fallback */
 @font-face {
-  font-family: 'Material Icons Outlined';
+  font-family: "Material Icons Outlined";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/mti-outlined.woff2") format("woff2");
 }
-
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -44,12 +42,12 @@ body {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
 .material-icons-outlined {
-  font-family: 'Material Icons Outlined';
+  font-family: "Material Icons Outlined";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -60,7 +58,7 @@ body {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -104,11 +102,9 @@ body {
   transition: all 0.1s ease-in-out;
   outline: none;
 }
-
 .navigation ul li a > span.icon {
   padding: 10px;
 }
-
 .navigation ul li a:hover {
   background: #1276ff;
   -ms-box-shadow: 0 0 5px #247fff;
@@ -125,6 +121,10 @@ body {
   justify-content: space-between;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .navigation-header-search-form {
   position: relative;
   display: flex;
@@ -138,7 +138,6 @@ body {
   -moz-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-
 .navigation-header-search-form input {
   padding: 10px 40px 10px 0;
   background-color: #383741;
@@ -161,12 +160,10 @@ body {
   display: flex;
   justify-content: flex-start;
 }
-
 .user-avatar span {
   font-weight: bold;
   font-size: 12px;
 }
-
 .user-avatar img {
   width: 60px;
   height: 60px;
@@ -177,11 +174,9 @@ body {
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-
 .user-avatar .info {
   padding: 10px;
 }
-
 .user-avatar a {
   text-decoration: none;
   color: #fff;
@@ -197,11 +192,18 @@ body {
   display: block;
   outline: none;
 }
-
 .user-avatar a:hover {
   background-color: #5c5a6a;
 }
 
-.cursor-pointer{
-  cursor: pointer;
+.navigation-ltr {
+  direction: ltr;
+  right: usnet;
+  left: 0;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
+
+/*# sourceMappingURL=main.css.map */
