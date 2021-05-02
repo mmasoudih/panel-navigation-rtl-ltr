@@ -201,3 +201,7 @@ body {
 .user-avatar a:hover {
   background-color: #5c5a6a;
 }
+
+.cursor-pointer{
+  cursor: pointer;
+}

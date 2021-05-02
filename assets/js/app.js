@@ -10,57 +10,70 @@ const iSearch = document.querySelector('.isearch');
 const searchForm = document.querySelector('.navigation-header-search-form');
 
 list.forEach(e => {
-    e.addEventListener('mouseenter', e => {
-        console.log(e.target);
-        if (e.target.children[0].children[0].classList.contains('material-icons')) {
-            e.target.children[0].children[0].classList.add('material-icons-outlined');
-            e.target.children[0].children[0].classList.remove('material-icons');
-        }
-    });
+  e.addEventListener('mouseenter', e => {
+      console.log(e.target);
+      if (e.target.children[0].children[0].classList.contains('material-icons')) {
+        e.target.children[0].children[0].classList.add('material-icons-outlined');
+        e.target.children[0].children[0].classList.remove('material-icons');
+      }
+  });
 })
 list.forEach(e => {
-    e.addEventListener('mouseleave', e => {
-        if (e.target.children[0].children[0].classList.contains('material-icons-outlined')) {
-            e.target.children[0].children[0].classList.add('material-icons');
-            e.target.children[0].children[0].classList.remove('material-icons-outlined');
-        }
-    });
+  e.addEventListener('mouseleave', e => {
+    if (e.target.children[0].children[0].classList.contains('material-icons-outlined')) {
+      e.target.children[0].children[0].classList.add('material-icons');
+      e.target.children[0].children[0].classList.remove('material-icons-outlined');
+    }
+  });
 })
 
 toggleBtn.addEventListener('click', e => {
-    if (navigation.offsetWidth === 320) {
-        hideMenu();
-    } else {
-        showMenu();
-    }
+  if (navigation.offsetWidth === 320) {
+    hideMenu();
+    window.localStorage.setItem('menu_staus', 'close');
+  } else {
+    showMenu();
+    window.localStorage.setItem('menu_staus', 'open');
+  }
 })
+window.onload = () => {
+  const menuStatus = window.localStorage.getItem('menu_staus');
 
+  if(menuStatus == 'open'){
+    console.log('menu is true')
+    showMenu();
+  }
+  if(menuStatus == 'close'){
+    console.log('menu is false')
+
+    hideMenu();
+  }
+}
 function hideMenu() {
-    navigation.style.width = '100px';
-    navigationTitle.style.display = 'none';
-    infoSection.style.display = 'none';
-    buttonHold.style.display = 'none';
-    searchForm.style.width = '0';
-    searchForm.style.padding = '0 25px';
-    navigationlinksTitle.forEach(e => {
-        e.style.display = 'none';
-    })
-
+  navigation.style.width = '100px';
+  navigationTitle.style.display = 'none';
+  infoSection.style.display = 'none';
+  buttonHold.style.display = 'none';
+  searchForm.style.width = '0';
+  searchForm.style.padding = '0 25px';
+  navigationlinksTitle.forEach(e => {
+      e.style.display = 'none';
+  })
 }
 
 function showMenu() {
-    navigation.style.width = '320px';
-    setTimeout(() => {
-        navigationlinksTitle.forEach(e => {
-            e.style.display = 'inline-block';
-        })
-        navigationTitle.style.display = 'block';
-        infoSection.style.display = 'block';
-        buttonHold.style.display = 'block';
-    }, 400);
-    searchForm.style.width = '100%';
-    searchForm.style.padding = '0 28px';
+  navigation.style.width = '320px';
+  setTimeout(() => {
+      navigationlinksTitle.forEach(e => {
+          e.style.display = 'inline-block';
+      })
+      navigationTitle.style.display = 'block';
+      infoSection.style.display = 'block';
+      buttonHold.style.display = 'block';
+  }, 400);
+  searchForm.style.width = '100%';
+  searchForm.style.padding = '0 28px';
 }
 iSearch.addEventListener('click', e => {
-    showMenu();
+  showMenu();
 });
