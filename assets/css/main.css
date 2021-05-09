@@ -125,6 +125,10 @@ body {
   cursor: pointer;
 }
 
+.disable-select {
+  user-select: none;
+}
+
 .navigation-header-search-form {
   position: relative;
   display: flex;
@@ -146,12 +150,13 @@ body {
   border: none;
   font-family: "Vazir";
   width: 100%;
+  outline: none;
 }
 
 .isearch {
   position: absolute;
   right: 1.4em;
-  top: 10px;
+  top: 8px;
   opacity: 0.7;
 }
 
@@ -194,16 +199,6 @@ body {
 }
 .user-avatar a:hover {
   background-color: #5c5a6a;
-}
-
-.navigation-ltr {
-  direction: ltr;
-  right: usnet;
-  left: 0;
-  border-top-left-radius: unset;
-  border-bottom-left-radius: unset;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

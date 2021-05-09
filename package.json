@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "scss": "sass --watch assets/sass:assets/css -s expanded"
+    "scss": "sass --watch assets/sass:assets/css -s expanded",
+    "scss:ltr": "sass --watch assets/sass/_ltr.scss:assets/css/ltr.css -s expanded"
   },
   "dependencies": {
     "sass": "^1.32.12"

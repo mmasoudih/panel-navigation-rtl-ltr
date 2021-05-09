@@ -14,11 +14,12 @@
         border: none;
         font-family: "Vazir";
         width:100%;
+        outline: none;
     }
 }
 .isearch{
     position: absolute;
     right: 1.4em;
-    top:10px;
+    top:8px;
     opacity: 0.7;
 }

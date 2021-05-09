@@ -1,4 +1,8 @@
-.navigation-ltr{
+@import 'mixin';
+body,html{
+	font-family: 'Work Sans', sans-serif;
+}
+.navigation{
 	direction: ltr;
 	right: usnet;
 	left: 0;
@@ -6,5 +10,15 @@
 	border-bottom-left-radius: unset;
 	border-top-right-radius: 1rem;
 	border-bottom-right-radius: 1rem;
-
+		
+}
+.isearch{
+	left: 1.4em !important;
+	right: unset !important;
+}
+.user-avatar {
+	padding: 0 0 0 8px;
+}
+.navigation-header-search-form input {
+	padding: 10px 0 10px 40px;
 }
