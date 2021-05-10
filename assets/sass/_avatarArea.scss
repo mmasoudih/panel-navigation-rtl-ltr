@@ -19,18 +19,64 @@
         padding: 10px;
     }
 
-    & a {
+    & #toggleProfileMenuBtn {
         text-decoration: none;
         color: $navigation-font-color;
         background-color: $navigation-background-link-avatar;
         border-radius: 50%;
-        @include prefix(transition, all 0.1s ease-in-out, ms o webkit moz);
+        @include prefix(transition, all 0.3s ease-in-out, ms o webkit moz);
         padding: 5px;
         margin: 20px 30px 0 0;
         display: block;
         outline: none;
     }
-    & a:hover{
+    & #toggleProfileMenuBtn:hover{
         background-color: lighten($color: $navigation-background-link-avatar, $amount:15 );
+    }
+}
+
+.user-avatar--menu {
+    position: absolute;
+    // bottom: 5em;
+    left: 10px;
+    min-width: 170px;
+    z-index: 10;
+    background: #323138;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    @include prefix(transition, all 0.112s ease-in-out, ms o webkit moz);
+    transform: rotate(-5deg);
+
+    &.show {
+        // bottom: 6em;
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(0);
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            display: block;
+            padding: 0 !important;
+            margin: 0;
+
+            &:first-child a {
+                border-radius: 10px 10px 0 0;
+            }
+
+            &:last-child a {
+                border-radius: 0 0 10px 10px;
+            }
+
+            a {
+                padding: 6px 5px 6px 0;
+                font-size: .9em;
+            }
+        }
     }
 }
