@@ -1,4 +1,4 @@
-const list = document.querySelectorAll('.navigation ul li a');
+const list = document.querySelectorAll('.navigation > ul li a');
 const toggleBtn = document.querySelector('.toggle');
 const navigation = document.querySelector('.navigation');
 const navigationlinksTitle = document.querySelectorAll('.text');
@@ -8,10 +8,12 @@ const infoSection = document.querySelector('.info');
 const buttonHold = document.querySelector('.button-hold');
 const iSearch = document.querySelector('.isearch');
 const searchForm = document.querySelector('.navigation-header-search-form');
+const toggleProfileMenuBtn = document.getElementById('toggleProfileMenuBtn');
+const userAvatarMenu = document.querySelector('.user-avatar--menu');
 
 list.forEach(e => {
   e.addEventListener('mouseenter', e => {
-      console.log(e.target);
+      // console.log(e.target);
       if (e.target.children[0].children[0].classList.contains('material-icons')) {
         e.target.children[0].children[0].classList.add('material-icons-outlined');
         e.target.children[0].children[0].classList.remove('material-icons');
@@ -77,3 +79,16 @@ function showMenu() {
 iSearch.addEventListener('click', e => {
   showMenu();
 });
+
+toggleProfileMenuBtn.onclick = e => {
+  if (!e.currentTarget.style.transform) {
+    e.currentTarget.style.transform = 'rotate(90deg)';
+    userAvatarMenu.classList.add('show');
+    userAvatarMenu.setAttribute('style', `top: ${(e.currentTarget.getBoundingClientRect().bottom - 120)}px`);
+  } else {
+    e.currentTarget.style.transform = null;
+    userAvatarMenu.classList.remove('show');
+    // userAvatarMenu.removeAttribute('style');
+    userAvatarMenu.setAttribute('style', `top: ${e.currentTarget.getBoundingClientRect().bottom - 90}px`);
+  }
+};
